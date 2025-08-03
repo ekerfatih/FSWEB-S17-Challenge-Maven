@@ -1,9 +1,10 @@
 package com.workintech.spring17challenge;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.workintech.spring17challenge.entity.*;
+//import com.workintech.spring17challenge.entity.*;
 import com.workintech.spring17challenge.exceptions.ApiErrorResponse;
 import com.workintech.spring17challenge.exceptions.ApiException;
+import com.workintech.spring17challenge.model.*;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -136,6 +137,7 @@ class MainTest {
         mockMvc.perform(delete("/courses/{id}", course.getId()))
                 .andExpect(status().isOk());
     }
+
     @Test
     @DisplayName("Test Course Setters and Getters")
     void testCourseSettersAndGetters() {
